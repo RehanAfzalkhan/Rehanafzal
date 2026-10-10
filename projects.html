@@ -66,6 +66,20 @@
     <p class="lead">
      Computer vision research, complemented by speech, language, and deployed AI applications.
     </p>
+    <nav aria-label="Project sections" class="link-row">
+     <a class="text-link" href="#fingerphoto">
+      Current research
+     </a>
+     <a class="text-link" href="#wavelet-analysis">
+      Wavelet tools
+     </a>
+     <a class="text-link" href="#selected-implementations">
+      ML implementations
+     </a>
+     <a class="text-link" href="#engineering-projects">
+      Engineering projects
+     </a>
+    </nav>
    </header>
    <section class="wrap section top-tight">
     <h2>
@@ -168,9 +182,142 @@
        </a>
       </div>
      </article>
+     <article class="card" id="wavelet-analysis">
+      <p class="eyebrow">
+       Research tools &middot; Image processing
+      </p>
+      <h3>
+       Wavelet analysis for image restoration
+      </h3>
+      <p>
+       Developed notebooks for exploring multi-level Haar wavelets, including level-three wavelet packet decomposition into 64 subbands. Visualizations, coefficient statistics, covariance analysis, and CSV exports support the study of image structure for fingerprint restoration.
+      </p>
+      <p class="small">
+       <strong>
+        Tools:
+       </strong>
+       PyWavelets, OpenCV, NumPy, pandas, Matplotlib
+      </p>
+      <div class="link-row">
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/Wavelet-Packet-Decomposition-for-FDWST">
+        64-subband notebook
+       </a>
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/fdwst-wavelet-analysis">
+        Batch analysis notebook
+       </a>
+      </div>
+     </article>
     </div>
    </section>
-   <section class="section soft">
+   <section class="section wrap" id="selected-implementations">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       Public code &amp; notebooks
+      </p>
+      <h2>
+       Selected machine learning implementations
+      </h2>
+     </div>
+    </div>
+    <div class="grid two">
+     <article class="card" id="conditional-gan">
+      <p class="eyebrow">
+       Computer vision &middot; Generative modeling
+      </p>
+      <h3>
+       Class-conditioned image generation
+      </h3>
+      <p>
+       Implemented a conditional DCGAN in PyTorch using FashionMNIST resized to 64 &times; 64. Label embeddings condition both the generator and discriminator; the notebook includes adversarial training, loss curves, and generated image grids.
+      </p>
+      <p class="small">
+       <strong>
+        Tools:
+       </strong>
+       PyTorch, torchvision, learned label embeddings
+      </p>
+      <div class="link-row">
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/Conditional-Generative-Adversarial-Network">
+        Source code &amp; notebook
+       </a>
+      </div>
+     </article>
+     <article class="card" id="convolutional-autoencoder">
+      <p class="eyebrow">
+       Computer vision &middot; Representation learning
+      </p>
+      <h3>
+       Convolutional image reconstruction
+      </h3>
+      <p>
+       Implemented a convolutional autoencoder for MNIST reconstruction with GPU mixed-precision training, checkpoint saving and resume support, and original-versus-reconstructed image comparisons.
+      </p>
+      <p class="small">
+       <strong>
+        Tools:
+       </strong>
+       PyTorch, CUDA AMP, BCEWithLogitsLoss
+      </p>
+      <div class="link-row">
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/autoencoder">
+        Source code
+       </a>
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/autoencoder/blob/main/Conv_autoencoder_pytorch.py">
+        Training implementation
+       </a>
+      </div>
+     </article>
+     <article class="card" id="pdf-question-answering">
+      <p class="eyebrow">
+       NLP &amp; LLMs &middot; Application prototype
+      </p>
+      <h3>
+       PDF question answering with retrieval
+      </h3>
+      <p>
+       Built a Streamlit prototype that extracts PDF text, splits it into overlapping chunks, embeds the chunks with MiniLM, and retrieves relevant passages with FAISS to provide context to a Groq-hosted language model.
+      </p>
+      <p class="small">
+       <strong>
+        Tools:
+       </strong>
+       Streamlit, LangChain, sentence-transformers, FAISS, Groq
+      </p>
+      <div class="link-row">
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/Pdf_reading_AI_application">
+        Source code
+       </a>
+      </div>
+     </article>
+     <article class="card" id="ml-from-scratch">
+      <p class="eyebrow">
+       Machine learning &middot; Coursework
+      </p>
+      <h3>
+       Machine learning from scratch
+      </h3>
+      <p>
+       Implemented logistic regression and decision trees in NumPy and compared them with scikit-learn on the Wisconsin Diagnostic Breast Cancer dataset. The workflow includes EDA, stratified train/validation/test splits, training-only scaling, and validation-based tuning. The saved notebook reports 97.67% logistic-regression accuracy on 86 held-out test samples.
+      </p>
+      <p class="small">
+       <strong>
+        Tools:
+       </strong>
+       NumPy, pandas, scikit-learn, Matplotlib
+      </p>
+      <div class="link-row">
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/Breast-Cancer">
+        Code &amp; evaluation
+       </a>
+       <a class="text-link" href="https://github.com/RehanAfzalkhan/Breast-Cancer/blob/main/breast%20cancer%20detection.ipynb">
+        View notebook
+       </a>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="section soft" id="engineering-projects">
     <div class="wrap">
      <div class="section-heading">
       <div>
@@ -275,7 +422,7 @@
          Multilingual Translation
         </h3>
         <p>
-         Built a Streamlit translation application supporting 24 language pairs with Helsinki-NLP MarianMT models, Hugging Face Transformers, and PyTorch.
+         Built a Streamlit translation application using Helsinki-NLP MarianMT models, Hugging Face Transformers, and PyTorch. The public notebook provides eight translation directions between English and French, Spanish, German, or Italian.
         </p>
         <div class="link-row">
          <a class="text-link" href="https://github.com/RehanAfzalkhan/Multi_language_Translation">
